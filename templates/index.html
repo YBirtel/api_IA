@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CarPrice API</title>
+</head>
+
+<body style="display: flex; align-items: center; justify-content: center; gap: 1em; flex-direction: column;">
+    <h1 style="text-align: center;">Veuillez renseignez votre offre</h1>
+
+    <form style="display: flex; align-items: center; justify-content: center; gap: 1em; flex-direction: column;" action="" method="post" class="test">
+        <div>
+            <input type="hidden" name="test" id="test" value="{{ data.test }}" required>
+        </div>
+        <div>
+            <label for="manufacturer">Marque de la voiture : </label>
+            <input type="text" name="manufacturer" id="manufacturer" required>
+        </div>
+        <div>
+            <label for="model">Modele de la voiture : </label>
+            <input type="text" name="model" id="model" required>
+        </div>
+        <div>
+            <label for="transmission">Type de transmission : </label>
+            <input type="text" name="transmission" id="transmission" required>
+        </div>
+        <div>
+            <label for="color">Couleur de la voiture : </label>
+            <input type="text" name="color" id="color" required>
+        </div>
+        <div>
+            <label for="odometer">Valeur de l'odomètre : </label>
+            <input type="number" name="odometer" id="odometer" required>
+        </div>
+        <div>
+            <label for="year">Date de production de la voiture : </label>
+            <input type="number" name="year" id="year" required>
+        </div>
+        <div>
+            <label for="fuel">Type d'essence : </label>
+            <input type="text" name="fuel" id="fuel" required>
+        </div>
+        <div>
+            <label for="engine">Type de moteur : </label>
+            <input type="text" name="engine" id="engine" required>
+        </div>
+
+        <div>
+            <label for="price">Prix de la voiture : </label>
+            <input type="number" name="price" id="price" required>
+        </div>
+
+        <div>
+            <input type="submit" value="Analyser mon offre">
+        </div>
+    </form>
+
+    <h2 style="padding: 1em;">{{ data.result }}</h2>
+</body>
+
+</html>
